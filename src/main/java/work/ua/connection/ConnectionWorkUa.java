@@ -9,7 +9,12 @@ import java.net.URL;
 
 public class ConnectionWorkUa {
 
-    public void connectionWorkUa(String url) throws IOException {
+    /**
+     *
+     * @param url
+     * @throws IOException
+     */
+    public void getConnectionWorkUa(String url) throws IOException {
 
         HttpURLConnection connection = null;
 
