@@ -18,7 +18,7 @@ public class ConnectionWorkUaTest {
     }
 
     @Test
-    public void getRespoceWorkUa(){
+    public void getRespoceWorkUa() throws Exception {
 
         ParseResponceWorkUa parse = new ParseResponceWorkUa();
         parse.getResponceWorkUa(url);
