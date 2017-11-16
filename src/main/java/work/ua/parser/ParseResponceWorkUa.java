@@ -7,6 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import work.ua.model.Article;
+import work.ua.model.PageNumber;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,4 +40,33 @@ public class ParseResponceWorkUa {
         }
 
     }
+
+    public void getCountPages(String url){
+
+        List<PageNumber> list = new ArrayList<>();
+
+        try {
+            Document doc = Jsoup.connect(url).get();
+
+            Elements elements = doc.getElementsByAttributeValue("class","pagination hidden-xs");
+           Elements el = elements.select("li");
+
+
+
+            for(Element e : el){
+
+
+
+
+                System.out.println(e);
+            }
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

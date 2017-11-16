@@ -21,6 +21,7 @@ public class ConnectionWorkUaTest {
     public void getRespoceWorkUa() throws Exception {
 
         ParseResponceWorkUa parse = new ParseResponceWorkUa();
-        parse.getResponceWorkUa(url);
+        //parse.getResponceWorkUa(url);
+        parse.getCountPages(url);
     }
 }
