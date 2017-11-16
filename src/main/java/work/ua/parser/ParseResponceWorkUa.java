@@ -1,7 +1,5 @@
 package work.ua.parser;
 
-import jdk.nashorn.internal.parser.JSONParser;
-import org.json.simple.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -49,17 +47,9 @@ public class ParseResponceWorkUa {
             Document doc = Jsoup.connect(url).get();
 
             Elements elements = doc.getElementsByAttributeValue("class","pagination hidden-xs");
-           Elements el = elements.select("li");
+            String s = elements.select("a").text();
+            System.out.println(s);
 
-
-
-            for(Element e : el){
-
-
-
-
-                System.out.println(e);
-            }
 
 
 
