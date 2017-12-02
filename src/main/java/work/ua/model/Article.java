@@ -1,5 +1,9 @@
 package work.ua.model;
 
+/**
+ * Model data wich get with WorkUa
+ *
+ */
 public class Article {
 
     private String url;

@@ -10,6 +10,7 @@ import java.net.URL;
 public class ConnectionWorkUa {
 
     /**
+     *Connection test WorkUa
      *
      * @param url
      * @throws IOException
@@ -22,9 +23,7 @@ public class ConnectionWorkUa {
 
             URL myUrl = new URL(url);
             connection = (HttpURLConnection) myUrl.openConnection();
-
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
             String inputLine;
             while((inputLine = reader.readLine()) != null){
 
@@ -34,10 +33,8 @@ public class ConnectionWorkUa {
             reader.close();
 
         } catch (MalformedURLException e) {
-
             System.err.print(e);
         } finally {
-
             connection.disconnect();
         }
 
